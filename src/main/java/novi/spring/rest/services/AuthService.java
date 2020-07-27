@@ -47,7 +47,6 @@ public class AuthService {
 
         JwtResponse response = new JwtResponse(
                 jwt,
-                userDetails.getId(),
                 userDetails.getUsername(),
                 userDetails.getEmail(),
                 roles);

@@ -8,10 +8,6 @@ import javax.validation.constraints.*;
 
 public class User {
 
-    @Id
-    @GeneratedValue
-    private Long id;
-
     @NotBlank
     @NotNull
     private String name;
@@ -33,10 +29,6 @@ public class User {
         this.name = name;
         this.email = email;
         this.password = password;
-    }
-
-    public Long getId() {
-        return id;
     }
 
     public String getName() {

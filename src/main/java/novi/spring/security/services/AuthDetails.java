@@ -11,10 +11,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class AuthDetails implements UserDetails {
-
-    @Getter
-    private Long id;
-
     @Getter
     private String username;
 
@@ -29,7 +25,6 @@ public class AuthDetails implements UserDetails {
     private Collection<GrantedAuthority> authorities;
 
     public AuthDetails(User user) {
-        this.id = user.getId();
         this.username = user.getName();
         this.email = user.getEmail();
         this.password = user.getPassword();
